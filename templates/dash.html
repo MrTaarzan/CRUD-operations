@@ -28,8 +28,8 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href=" {% static 'index.html' %} "><img src=" {% static 'assets/images/logo.svg' %} " alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {% static 'assets/images/logo-mini.svg' %} " alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href=" {% url 'index' %} "><img src=" {% static 'assets/images/logo.svg' %} " alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href=" {% url 'index' %} "><img src=" {% static 'assets/images/logo-mini.svg' %} " alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -665,7 +665,6 @@
 <!--                    <h4 class="card-title"></h4>-->
 <!--                    <div class="table-responsive">-->
 
-{% block content %}
 <!--                      <table class="table">-->
 <!--                        <thead>-->
 <!--                          <tr>-->
@@ -780,7 +779,10 @@
 <!--                            </td>-->
 <!--                            <td>-->
 <!--                              <img src=" {% static 'assets/images/faces/face4.jpg' %} " alt="image" />-->
+                    {% block content %}
+
                               hii
+                    {% endblock %}
 <!--                            </td>-->
 <!--                            <td> 02312 </td>-->
 <!--                            <td> $14,500 </td>-->
@@ -792,7 +794,7 @@
 <!--                            </td>-->
 <!--                          </tr>-->
 
-{% endblock %}
+
                         </tbody>
                       </table>
                     </div>
